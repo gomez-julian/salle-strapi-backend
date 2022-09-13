@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requests",
+  "info": {
+    "singularName": "request",
+    "pluralName": "requests",
+    "displayName": "request"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "parthership": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parthership.parthership"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "status": {
+      "type": "string",
+      "default": "Pendiente"
+    },
+    "comment": {
+      "type": "text"
+    }
+  }
+}

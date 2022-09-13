@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partherships",
+  "info": {
+    "singularName": "parthership",
+    "pluralName": "partherships",
+    "displayName": "parthership"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "address": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 15,
+      "required": true
+    },
+    "businessActivity": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "webPage": {
+      "type": "string"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
